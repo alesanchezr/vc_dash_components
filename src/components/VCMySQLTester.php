@@ -1,8 +1,8 @@
 <?php
 
-namespace BreatheCode\VCComposer\Component;
+namespace WPAS\VCDash\Components;
 
-class VCMySQLTester{
+class MySQLTester extends BaseComponent{
     
     const BASE_NAME = 'mysqltester';
     
@@ -11,8 +11,8 @@ class VCMySQLTester{
         add_shortcode( self::BASE_NAME, array($this,'render'));
     }
     
-    function register()
-    {
+    function register(){
+    	
 	   vc_map( array(
 	      "name" => __( "MySQL Tester", "mysql-texter" ),
 	      "base" => self::BASE_NAME,
@@ -53,8 +53,8 @@ class VCMySQLTester{
 	   ) );
     }
     
-	function render( $atts , $content = null) 
-	{
+	function render( $atts , $content = null){
+		
 	    extract( shortcode_atts( array(
 	      'databasename' => '',
 	      'mysqlheight' => '200px',

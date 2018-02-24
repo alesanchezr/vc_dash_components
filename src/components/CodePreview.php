@@ -1,39 +1,34 @@
 <?php
 
-namespace BreatheCode\VCComposer\Component;
+namespace WPAS\VCDash\Components;
 
-class VCCodePreview{
+class CodePreview extends BaseComponent{
     
     const BASE_NAME = 'codepreview';
-    
-    function __construct(){
-        add_action( 'vc_before_init', array($this,'register'));
-        add_shortcode( self::BASE_NAME, array($this,'render'));
-    }
     
     function register()
     {
 	   vc_map( array(
-	      "name" => __( "Code Preview", "code-preview" ),
+	      "name" => __( "Code Preview", "wpas_vc_dash" ),
 	      "base" => "codepreview",
-	      "category" => __( "BreatheCode", "code-preview"),
+	      "category" => __( "BreatheCode", "wpas_vc_dash"),
 	      "as_child" => array('only' => 'coderepl'),
 	      "params" => array(
 	         array(
 	            "type" => "checkbox",
-	            "heading" => __( "Bootstrap active", "code-preview" ),
+	            "heading" => __( "Bootstrap active", "wpas_vc_dash" ),
 	            "param_name" => "bootstrap",
 	            "value" => array('on'   => 'true' ),
-	            "description" => __( "Import bootstrap into the iframe.", "code-preview" )
+	            "description" => __( "Import bootstrap into the iframe.", "wpas_vc_dash" )
 	         ),
 	        array(
 	            "type" => "textarea_raw_html",
 	            "holder" => "div",
 	            "weight" => 20,
-	            "heading" => __( "Content", "code-preview" ),
+	            "heading" => __( "Content", "wpas_vc_dash" ),
 	            "param_name" => "content",
-	            "value" => __( "Write the code here", "code-preview" ),
-	            "description" => __( "Write you code lines, to add styles use  <style type=\"text/css\" scoped>", "code-preview" )
+	            "value" => __( "Write the code here", "wpas_vc_dash" ),
+	            "description" => __( "Write you code lines, to add styles use  <style type=\"text/css\" scoped>", "wpas_vc_dash" )
 	            )
 	        )
 	   ) );

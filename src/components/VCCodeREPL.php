@@ -1,8 +1,8 @@
 <?php
 
-namespace BreatheCode\VCComposer\Component;
+namespace WPAS\VCDash\Components;
 
-class VCCodeREPL{
+class CodeREPL extends BaseComponent{
     
     const BASE_NAME = 'coderepl';
     
