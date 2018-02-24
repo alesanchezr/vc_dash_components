@@ -15,6 +15,6 @@ require ABSPATH . 'vendor/autoload.php';
 /**
  * Everything related to the visual composer settings and components.
  * */
-$codePreview = new \WPAS\VCDash\Components\CodePreview();
+$codePreview = new \VCDash\Components\CodePreview();
 
 if(class_exists('WPAS\Messaging\WPASAdminNotifier')) WPASAdminNotifier::loadTransientMessages();

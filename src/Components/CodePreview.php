@@ -1,6 +1,6 @@
 <?php
 
-namespace WPAS\VCDash\Components;
+namespace VCDash\Components;
 
 class CodePreview extends BaseComponent{
     

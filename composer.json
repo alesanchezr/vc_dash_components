@@ -17,8 +17,8 @@
         "composer/installers": "v1.5.0"
     },
 	"autoload":{
-        "psr-0":{
-            "WPAS": "./src"
+        "psr-4":{
+            "VCDash": "./src"
         }
     }
 }
