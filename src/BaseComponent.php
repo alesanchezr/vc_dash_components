@@ -1,6 +1,6 @@
 <?php
 
-namespace VCDash\Components;
+namespace VCDash;
 
 class BaseComponent{
     
@@ -14,7 +14,7 @@ class BaseComponent{
     function register(){
         throw new WPASException('The component '.$baseName.' needs a register function');
     }
-    function render(){
+    function render($atts , $content = null){
         throw new WPASException('The component '.$baseName.' needs a render function');
     }
 }

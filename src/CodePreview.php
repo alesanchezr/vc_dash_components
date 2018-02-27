@@ -1,13 +1,17 @@
 <?php
 
-namespace VCDash\Components;
+namespace VCDash;
 
 class CodePreview extends BaseComponent{
     
     const BASE_NAME = 'codepreview';
     
-    function register()
-    {
+    function __construct(){
+    	parent::__construct(self::BASE_NAME);
+    }
+    
+    function register(){
+    	
 	   vc_map( array(
 	      "name" => __( "Code Preview", "wpas_vc_dash" ),
 	      "base" => "codepreview",
